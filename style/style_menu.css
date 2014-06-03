@@ -1,0 +1,70 @@
+ul.topnav {
+	list-style: none;
+	padding: 0 20px;
+	margin: 0 auto;
+		
+	position: absolute;
+}
+ul.topnav li {
+	float: left;
+	margin: 0 20px 0 20px;
+	padding: 0 0px 0 0;
+	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+
+
+ul.topnav li a{
+	
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+	font-size: 12px;
+ font-family: Tahoma;
+ color: #FFFFFF;
+ text-decoration: none;
+  font-weight: bold;
+	
+}
+
+ul.topnav li span { /*--Drop down trigger styles--*/
+	width: 17px;
+	height: 35px;
+	float: left;
+	margin: 0px 0 0 0px;
+	background: url(../images/subnav_btn.png) no-repeat center top;
+}
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;}
+
+ul.topnav li ul.subnav {
+	list-style-type: none;
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: 0; top: 35px;
+	background: #333;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #111;
+}
+ul.topnav li ul.subnav li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; /*--Create bevel effect--*/
+	border-bottom: 1px solid #444; /*--Create bevel effect--*/
+	clear: both;
+	width: 170px;
+}
+
+ul.subnav li a:hover{
+
+}
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	background: #414141 url(../images/dropdown_linkbg.png) no-repeat 5px center;
+	padding-left: 20px;
+}
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+	background: #222 url(dropdown_linkbg.gif) no-repeat 10px center;
+}

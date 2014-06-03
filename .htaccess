@@ -1,0 +1,8 @@
+RewriteEngine on
+DirectoryIndex index.php
+RewriteRule ^([a-zA-Z-_0-9]+)$ index.php?id=$1
+RewriteRule ^([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?id=$1&action=$2
+RewriteRule ^spary/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?id=spary&action=$1&spar_id=$2
+RewriteRule ^message/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?id=message&action=$1&message_id=$2
+RewriteRule ^clans/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?id=clans&action=$1&clan_id=$2
+RewriteRule ^([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?id=$1&nick=$2&key=$3

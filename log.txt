@@ -1,0 +1,7 @@
+13-08-2011 13:45:55, Nie połączono z bazą danych!
+09-07-2011 15:01:16, Nie wybrano bazy danych!
+09-07-2011 15:00:49, Nie połączono z bazą danych!
+08-07-2011 19:22:57, Nie połączono z bazą danych!
+Array, Nie połączono z bazą danych!
+18-06-2011 17:23:22, Nie wybrano bazy danych!
+18-06-2011 17:23:21, Nie wybrano bazy danych!

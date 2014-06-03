@@ -1,0 +1,12 @@
+Oznaczenia u¿ytkowników:
+1 - admin
+2 - moderator
+3 - user
+4 - nieaktywowany user
+
+Oznaczenia wiadomoœci:
+0 - nieprzeczytana
+1 - przeczytana
+2 - kosz
+
+Format daty, dla tebeli session - date('d-m-Y, G:i ', $_SERVER['REQUEST_TIME']);
