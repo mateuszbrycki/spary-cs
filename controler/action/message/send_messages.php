@@ -4,8 +4,7 @@
 	$messageSend->getAllSendMessages();
 	
 	while($row = $messageSend->getRows())
-	{	
-		$row['message_to_name'] = $messageSend->getUserName($row['message_to']);
+    {
 		$results[] = $row; // dodajesz kazdy rekord do tablicy
 	}
 	

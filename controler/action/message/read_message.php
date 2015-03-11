@@ -7,9 +7,10 @@
 		$row = $readMessage->getRows();
 		
 		if($readMessage->checkRecipient() OR $readMessage->checkSender())
-		{
-			$row['message_from'] = $readMessage->checkUserName($row['message_from']);
+        {
 			$objSmarty->assign('row', $row);
+            $readMessage->doMessageRead();
+
 		} else {
 			$objSmarty->assign('actionMessage', Debug::getMessage('Nie masz prawa do zobaczenia tej wiadomości!', 1)); //1 - blad, 0 - nie
 		}
@@ -65,6 +66,12 @@ class readMessage
 	{
 		return $this->modelReadMessage->modelCheckuserName($user_id);	
 	}
+
+    public function doMessageRead() {
+        return $this->modelReadMessage->modelDoMessageRead($this->message_id);
+
+    }
+
 	
 }
 

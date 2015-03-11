@@ -4,13 +4,15 @@ require_once('./class/class.db.php');
 
 class modelInbox extends Database
 {
-	
+
 	public function modelGetAllMessages($user_id)
 	{
-		$this->query = "SELECT * 
-						FROM message 
-						WHERE message_to = '$user_id' AND (message_status = '0' OR message_status = '1')
-						ORDER BY message_id DESC";		
+		$this->query = "SELECT m.message_id, m.message_to, m.message_title, m.message_from, m.message_text, m.message_status, m.message_send_date, u.user_name
+						FROM message m
+						RIGHT JOIN user u
+						ON m.message_from = u.user_id
+						WHERE m.message_to = '$user_id' AND (m.message_status = '0' OR m.message_status = '1')
+						ORDER BY m.message_id DESC";
 		$this->resultMessage = $this->dbQuery($this->query);	
 		
 		return $this->resultMessage;

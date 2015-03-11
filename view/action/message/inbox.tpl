@@ -20,7 +20,7 @@
                         	<img src='{$page}/images/mail.png' width='20px' height='20px' />
                         {/if}
                     </td>
-                    <td ><a href='{$page}/clans/clan_info/{$row.message_from}'>{$row.message_from_name}</a></td>
+                    <td ><a href='{$page}/clans/clan_info/{$row.message_from}'>{$row.user_name}</a></td>
                     <td ><a href='{$page}/message/read_message/{$row.message_id}'>{$row.message_title}</a></td>
                     <td ><center>{$row.message_send_date}</center></td>
                     <td>

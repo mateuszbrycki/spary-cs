@@ -5,7 +5,7 @@
 	
 	while($row = $inbox->getRows())
 	{	
-		$row['message_from_name'] = $inbox->getUserName($row['message_from']);
+		//$row['message_from_name'] = $inbox->getUserName($row['message_from']);
 		$results[] = $row; // dodajesz kazdy rekord do tablicy
 	}
 	

@@ -4,8 +4,7 @@
 	$deleteMessages->getAllDeleteMessages();
 	
 	while($row = $deleteMessages->getRows())
-	{	
-		$row['message_from_name'] = $deleteMessages->getUserName($row['message_from']);
+	{
 		$results[] = $row; // dodajesz kazdy rekord do tablicy
 	}
 	

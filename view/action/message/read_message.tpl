@@ -2,14 +2,14 @@
     
     {if isset($row)}
     <p style='margin: 20px;'>
-    	Wiadomość wysłana przez: {$row.message_from}<br />
+    	Wiadomość wysłana przez: {$row.user_name}<br />
    	 	Data wysłania wiadomości: {$row.message_send_date}<br />
     	Temat: {$row.message_title}<br />
    		Treść: <br />
     	<p style='margin: 30px;'>{$row.message_text}</p>
     	<button style='width: 92px; height: 22px; margin: 20px;'>Odpowiedz</button>
         
-    	<form style='display: none; margin: 20px;' action="http://{$page}/message/new_message" method='POST' >
+    	<form style='display: none; margin: 20px;' action="{$page}/message/new_message" method='POST' >
     		<table>
               	<tr>
                 	<td>Odbiorca:</td>

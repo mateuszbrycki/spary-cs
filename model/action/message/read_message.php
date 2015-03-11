@@ -6,12 +6,26 @@ class modelReadMessage extends Database
 {
 	public function modelGetMessageInfo($message_id)
 	{
-		$this->query = "SELECT * FROM message WHERE message_id = '$message_id'";
+
+		$this->query = "SELECT m.message_id, m.message_to, m.message_title, m.message_from, m.message_text, m.message_status, m.message_send_date, u.user_name
+						FROM message m
+						RIGHT JOIN user u
+						ON m.message_from = u.user_id
+						WHERE m.message_id = '$message_id'";
 		
 		$this->result = $this->dbQuery($this->query);
 		
 		return $this->result;
 	}
+
+    public function modelDoMessageRead($message_id)
+    {
+        $this->query = "UPDATE message SET
+						message_status = '1'
+						WHERE message_id = '$message_id'";
+
+        $this->dbQuery($this->query);
+    }
 	
 	public function modelGetRows()
 	{
