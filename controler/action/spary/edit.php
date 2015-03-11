@@ -14,9 +14,9 @@
 			
 			if(isset($_POST['editspar']))
 			{
-				if($sparEdit->checkEmpty( $_POST['data'] ,$_POST['time'], $_POST['spar_players'], $_POST['spar_serwer_ip']))
+				if($sparEdit->checkEmpty( $_POST['data'] ,$_POST['time'], $_POST['spar_players'], $_POST['spar_server_ip']))
 				{
-					$sparEdit->insertNewValues($_POST['data'] ,$_POST['time'], $_POST['spar_players'], $_POST['spar_serwer_ip'], $_POST['spar_game_type'], $_POST['spar_game_status']);
+					$sparEdit->insertNewValues($_POST['data'] ,$_POST['time'], $_POST['spar_players'], $_POST['spar_server_ip'], $_POST['spar_game_type'], $_POST['spar_game_status']);
 					
 					$objSmarty->assign('actionMessage', Debug::getMessage('Poprawnie edytowano sparing!', 0)); //1 - blad, 0 - nie
 					
@@ -57,9 +57,9 @@ class sparEdit
 		}
 	}
 	
-	public function insertNewValues($data, $time, $spar_players, $spar_serwer_ip, $spar_game_type, $spar_game_status)
+	public function insertNewValues($data, $time, $spar_players, $spar_server_ip, $spar_game_type, $spar_game_status)
 	{
-		$this->modelEditSpar->modelInsertNewValues($data, $time, $spar_players, $spar_serwer_ip, $spar_game_type, $spar_game_status, $this->spar_id);
+		$this->modelEditSpar->modelInsertNewValues($data, $time, $spar_players, $spar_server_ip, $spar_game_type, $spar_game_status, $this->spar_id);
 	}
 	
 }

@@ -7,9 +7,11 @@ class modelSpary extends Database
 {
 	public function modelGetAllSpars()
 	{
-		$this->query = "SELECT spary.spar_date, spary.spar_server_ip, spary.spar_id, spary.spar_game_type, spary.spar_user_add, user.user_id, user.user_team_name, spary.spar_game_status
-				    FROM spary, user
-				    WHERE spary.spar_user_add = user.user_id AND spary.spar_user_connect = '0'";	
+		$this->query = "SELECT s.spar_date, s.spar_server_ip, s.spar_id, s.spar_game_type, s.spar_user_add, u.user_id, u.user_team_name, s.spar_game_status
+				    FROM spary s
+				    RIGHT JOIN user u
+                    ON s.spar_user_add = u.user_id
+				    WHERE s.spar_user_connect = '0'";
 					
 		$this->result = $this->dbQuery($this->query);	
 		

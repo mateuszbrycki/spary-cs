@@ -6,7 +6,11 @@ class modelSparInfo extends Database
 {
 	public function modelGetSparInfo($spar_id)
 	{
-		$this->query = "SELECT spary.spar_date, spary.spar_time, spary.spar_players, spary.spar_server_ip, spary.spar_game_type, spary.spar_user_add, spary.spar_game_status, spary.spar_user_connect, user.user_team_name FROM spary, user WHERE spar_id = '$spar_id' AND spary.spar_user_add = user.user_id";
+		$this->query = "SELECT s.spar_date, s.spar_time, s.spar_players, s.spar_server_ip, s.spar_game_type, s.spar_user_add, s.spar_game_status, s.spar_user_connect, u.user_team_name
+                        FROM spary s
+                        RIGHT JOIN user u
+                        ON u.user_id = s.spar_user_add
+                        WHERE s.spar_id = '$spar_id'";
 		$this->result = $this->dbQuery($this->query);
 		
 		return $this->result;

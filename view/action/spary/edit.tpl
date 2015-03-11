@@ -53,7 +53,7 @@
 			</tr>
 			<tr>
 				<td>Podaj ip serwera (w formacie ip:port): </td>
-				<td><input type='text' name='spar_serwer_ip' size="40" value='{$row.spar_serwer_ip}'></td>
+				<td><input type='text' name='spar_server_ip' size="40" value='{$row.spar_server_ip}'></td>
 			</tr>
 			
 			
