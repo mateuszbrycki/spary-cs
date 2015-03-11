@@ -3,7 +3,7 @@
 			// Hide the suggestion box.
 			$('#suggestions').hide();
 		} else {
-			$.post("http://localhost/spary-cs.pl/spary_oop_lay_kozak/rpc.php", {queryString: ""+inputString+""}, function(data){
+			$.post("http://spary-cs.localhost/rpc.php", {queryString: ""+inputString+""}, function(data){
 				if(data.length >0) {
 					$('#suggestions').show();
 					$('#autoSuggestionsList').html(data);

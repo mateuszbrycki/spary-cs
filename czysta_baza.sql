@@ -33,56 +33,6 @@ CREATE TABLE IF NOT EXISTS `config` (
 	`admin_mail` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla  `message`
---
-
-CREATE TABLE IF NOT EXISTS `message` (
-  `message_id` int(11) NOT NULL auto_increment,
-  `message_title` varchar(255) NOT NULL,
-  `message_to` varchar(255) NOT NULL default '0',
-  `message_from` varchar(255) NOT NULL,
-  `message_text` text NOT NULL,
-  `message_status` varchar(255) NOT NULL,
-  `message_send_date` varchar(255) NOT NULL,
-  PRIMARY KEY  (`message_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
-
---
--- Struktura tabeli dla  `news`
---
-
-CREATE TABLE IF NOT EXISTS `news` (
-  `id` int(11) NOT NULL auto_increment,
-  `tytul` tinytext collate utf8_unicode_ci NOT NULL,
-  `tresc` text collate utf8_unicode_ci NOT NULL,
-  `data` varchar(50) collate utf8_unicode_ci NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
-
-
-
---
--- Struktura tabeli dla  `spary`
---
-
-CREATE TABLE IF NOT EXISTS `spary` (
-  `spar_id` int(11) NOT NULL auto_increment,
-  `spar_user_add` int(11) NOT NULL,
-  `spar_user_connect` int(11) NOT NULL,
-  `spar_date` varchar(255) NOT NULL,
-  `spar_time` varchar(5) NOT NULL,
-  `spar_game_type` int(5) NOT NULL,
-  `spar_game_status` int(1) NOT NULL,
-  `spar_serwer_ip` varchar(255) NOT NULL,
-  `spar_players` varchar(255) NOT NULL,
-  PRIMARY KEY  (`spar_id`),
-  UNIQUE KEY `spar_id_2` (`spar_id`),
-  KEY `spar_id` (`spar_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 
 
@@ -107,5 +57,58 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_team_players` varchar(255) NOT NULL,
   PRIMARY KEY  (`user_id`),
   KEY `user_id` (`user_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla  `message`
+--
+
+CREATE TABLE IF NOT EXISTS `message` (
+  `message_id` int(11) NOT NULL auto_increment,
+  `message_title` varchar(255) NOT NULL,
+  `message_to` varchar(255) NOT NULL default '0',
+  `message_from` varchar(255) NOT NULL,
+  `message_text` text NOT NULL,
+  `message_status` varchar(255) NOT NULL,
+  `message_send_date` varchar(255) NOT NULL,
+  PRIMARY KEY  (`message_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+
+--
+-- Struktura tabeli dla  `news`
+--
+
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` tinytext collate utf8_unicode_ci NOT NULL,
+  `text` text collate utf8_unicode_ci NOT NULL,
+  `date` varchar(50) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+
+
+--
+-- Struktura tabeli dla  `spary`
+--
+
+CREATE TABLE IF NOT EXISTS `spary` (
+  `spar_id` int(11) NOT NULL auto_increment,
+  `spar_user_add` int(11) NOT NULL,
+  `spar_user_connect` int(11) NOT NULL,
+  `spar_date` varchar(255) NOT NULL,
+  `spar_time` varchar(5) NOT NULL,
+  `spar_game_type` int(5) NOT NULL,
+  `spar_game_status` int(1) NOT NULL,
+  `spar_serv	er_ip` varchar(255) NOT NULL,
+  `spar_players` varchar(255) NOT NULL,
+  PRIMARY KEY  (`spar_id`),
+  UNIQUE KEY `spar_id_2` (`spar_id`),
+  KEY `spar_id` (`spar_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 

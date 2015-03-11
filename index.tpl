@@ -28,7 +28,7 @@
          	{include file='./include/menu_2.tpl'}
         {/if}
         <div id='date'>
-        <p>Dziś jest 03-08-2011 09:03</p>
+        <p>Dziś jest {$date}</p>
         </div>
 
     </div>

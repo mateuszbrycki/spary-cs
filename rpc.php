@@ -1,12 +1,12 @@
 <?php
-	
+
 	// PHP5 Implementation - uses MySQLi.
   
     	$db = array (
 				'host' => 'localhost',
 				'user' => 'root',
-				'pass' => 'pass',
-				'name' => 'spary_new'
+				'pass' => '',
+				'name' => 'sparycs_spary'
 			);
             
 	$db = new mysqli($db['host'], $db['user'], $db['pass'], $db['name']);

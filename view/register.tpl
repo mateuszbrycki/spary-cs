@@ -3,7 +3,7 @@
 
 		<div class='nag'><span>Rejestracja</span></div>
 
-		<form action='{$page}/register/' method='POST' style='margin: 20px;'>
+		<form action='{$page}/register' method='POST' style='margin: 20px;'>
         
         <table>
         	<tr>

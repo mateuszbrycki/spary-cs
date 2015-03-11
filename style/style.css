@@ -159,12 +159,12 @@ body
 }
 
 .nag 
-{	
-	width: 282px;
-	height: 42px;
-	background: url(../images/content.png) no-repeat;	
-	position: relative;
+{
+	height: 25px;
+	background-color: #ed9728;
+    border: 1px solid #975500;
 	margin-top: 0px;
+    padding: 10px 0;
 }
 
 .nag span 
@@ -173,7 +173,7 @@ body
 	font-family: sans-serif;
 	font: Calibri;
 	color: #FFFFFF;
-	margin: 6px 40px;
+	margin: 20px 40px;
 }
 
 #news .title 
@@ -248,5 +248,21 @@ input:hover
 textarea:hover
 {
 	background: #b49970;
+}
+
+.debugGreen {
+    background-color: #68cf29;
+    border: 1px solid #2e7006;
+    height: 25px;
+    margin-top: 0px;
+    padding: 10px 5px;
+}
+
+.debugRed {
+    background-color: #e93935;
+    border: 1px solid #970f0b;
+    height: 25px;
+    margin-top: 0px;
+    padding: 10px 5px;
 }
 

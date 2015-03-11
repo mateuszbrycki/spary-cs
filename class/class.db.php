@@ -13,7 +13,7 @@ class Database
 				'host' => 'localhost',
 				'user' => 'root',
 				'pass' => '',
-				'name' => 'spary_new'
+				'name' => 'sparycs_spary'
 			);
 		
 		
@@ -37,7 +37,7 @@ class Database
 	
 	public function dbQuery($query)  /* wykonuje zapytanie */
 	{		
-			$this->result = mysql_query($query);
+			$this->result = mysql_query($query) or die(mysql_error());
 			if(!isset($this->result))
 			{
 				Debug::getMessage("Nie udało się wykonać polecenia query", 1);
@@ -58,19 +58,16 @@ class Database
 	}
 		
 	public function dbFetchArray($result) /* wykonuje przypisanie do tablicy */
-	{			
-			$this->row = mysql_fetch_array($result);
-			if(!isset($this->row))
-			{
-				Debug::getMessage("Nie udało się wykonać polecenia fetch array", 1);
-			} else {
-				return $this->row;
-			}
-	}
-	
-
-	
-
+    {
+        if($result) {
+            $this->row = mysql_fetch_array($result);
+            if (!isset($this->row)) {
+                Debug::getMessage("Nie udało się wykonać polecenia fetch array", 1);
+            } else {
+                return $this->row;
+            }
+        }
+    }
 }
 
 ?>

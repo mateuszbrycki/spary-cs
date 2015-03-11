@@ -50,11 +50,11 @@ class Debug
 	{
 			if($status != 1)
 			{
-				return "<font color= 'green' style='margin: 20px;'>" . $message . "</font>";
+				return "<div class='debugGreen'>" . $message . "</div>";
 		
 			} else
 			{
-				return "<font color= 'red' style='margin: 20px;'>" . $message . "</font>";
+				return "<div class='debugRed'>" . $message . "</div>";
 			}
 	}
 }
