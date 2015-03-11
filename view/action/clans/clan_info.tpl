@@ -1,6 +1,6 @@
 	<div class='nag'><span>Lista klanów - informacje o klanie</span></div>
  	{if isset($row)}
-    <p style='margin: 20px;'>
+    <p style='margin: 20px; padding: 10px;'>
     	<b>Nazwa użytkownika:</b> {$row.user_name}<br />
         <b>Nazwa klanu:</b> {$row.user_team_name}<br />
         <b>Rodzaj klanu:</b> {$row.user_team_status}<br />
