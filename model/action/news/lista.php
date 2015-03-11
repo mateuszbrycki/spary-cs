@@ -6,9 +6,9 @@ class modelListNews extends Database
 {
     public function modelGetNewsList()
     {
-        $this->query = "SELECT n.id, n.title, n.text, n.date, u.user_name
+        $this->query = "SELECT n.id, n.title, n.date, u.user_name
 						FROM news n
-					    JOIN user u ON n.author_id = u.user_id";
+					    JOIN user u ON u.user_id = n.author_id";
 
         $this->result = $this->dbQuery($this->query);
         return $this->result;

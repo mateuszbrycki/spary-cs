@@ -3,13 +3,9 @@
     $newsList= new newsList;
     $newsList->getNewsList();
 
-    while($row = $newsList->getRows()) {
-        $results[] = $row; // dodajesz kazdy rekord do tablicy
-    }
-
     if(isset($results))
     {
-       $objSmarty->assign('rows', $results);
+       $objSmarty->assign('rows',  $newsList->getRows());
     } else {
         $objSmarty->assign('actionMessage', Debug::getMessage('Brak artykułów do wyświetlenia', 1)); //1 - blad, 0 - nie
     }
