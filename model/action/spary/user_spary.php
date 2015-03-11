@@ -6,7 +6,7 @@ class modelUserSpary extends Database
 {
 	public function modelGetUserSparAdd($user_id)
 	{
-		$this->query = "SELECT spar_date, spar_time, spar_serwer_ip, spar_game_type, spar_id
+		$this->query = "SELECT spar_date, spar_time, spar_server_ip, spar_game_type, spar_id
 						FROM spary
 						WHERE spar_user_add = '$user_id'";	
 						
@@ -16,7 +16,7 @@ class modelUserSpary extends Database
 	}
 	public function modelGetUserConnect($user_id)
 	{
-		$this->queryConnect = "SELECT spar_date, spar_time, spar_serwer_ip, spar_game_type
+		$this->queryConnect = "SELECT spar_date, spar_time, spar_server_ip, spar_game_type
 						FROM spary
 						WHERE spar_user_connect = '$user_id'";	
 		$this->resultConnect = $this->dbQuery($this->queryConnect);

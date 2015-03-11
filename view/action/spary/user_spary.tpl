@@ -15,9 +15,9 @@
          	<tr>
          		<td>{$row.spar_date}</td>
            		<td>{$row.spar_time}</td>
-            	<td>{$row.spar_serwer_ip}</td>
+            	<td>{$row.spar_server_ip}</td>
            		<td>{$row.spar_game_type}</td>
-          	  	<td><a href='http://localhost/spary_new/spary/edit/{$row.spar_id}'>Edytuj</a> |<a href='http://localhost/spary_new/spary/delete/{$row.spar_id}'>Usuń</a></td>
+          	  	<td><a href='http://spary-cs.localhost/spary/edit/{$row.spar_id}'>Edytuj</a> |<a href='http://spary-cs.localhost/spary/delete/{$row.spar_id}'>Usuń</a></td>
          	</tr>
         	{/foreach}
         {else}
@@ -44,7 +44,7 @@
          <tr>
          	<td>{$row_2.spar_date}</td>
             <td>{$row_2.spar_time}</td>
-            <td>{$row_2.spar_serwer_ip}</td>
+            <td>{$row_2.spar_server_ip}</td>
             <td>{$row_2.spar_game_type}</td>
             <td></td>
          </tr>
