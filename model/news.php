@@ -9,7 +9,9 @@ class modelNews extends Database
 				    FROM news n
 				    LEFT JOIN user u
                     ON n.author_id = u.user_id
-				    LIMIT 5";
+                    ORDER BY n.id DESC
+				    LIMIT 5
+				    ";
 
         $this->result = $this->dbQuery($this->query);
 

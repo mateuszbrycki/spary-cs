@@ -3,7 +3,7 @@
 		
 		<li><a href='#'>Konto</a>
 		
-				<ul class="subnav">
+			<ul class="subnav">
 				<li><a href='{$page}/acc/change_mail'>Zmień maila</a></li>
 				<li><a href='{$page}/acc/change_pass'>Zmień hasło</a></li>
 				<li><a href='{$page}/acc/change_other'>Zmień inne dane</a></li>
@@ -31,9 +31,25 @@
 				<li><a href='{$page}/message/delete_messages'>Kosz</a></li>			
 			</ul>
 		</li>
+
+        <li><a href='{$page}/clans'>Klany</a></li>
+
+        {if isset($accStatus) && $accStatus == 1}
+
+            <li><a href='#'>Newsy</a>
+                <ul class="subnav">
+                    <li><a href='{$page}/news/lista'>Lista artykułów</a></li>
+                    <li><a href='{$page}/news/add'>Nowy artykuł</a></li>
+                </ul>
+            </li>
+
+        {else}
+            <li><a href='{$page}/faq'>FAQ</a></li>
+        {/if}
+
 		
-		<li><a href='{$page}/faq'>FAQ</a></li>		
-		
-		<li><a href='{$page}/clans'>Klany</a></li>
+
 		<li><a href='{$page}/logout'>Wyloguj</a></li>
+
+
 	</ul>

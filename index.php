@@ -18,7 +18,11 @@
 	$objSmarty->allow_php_tag = true;
 	
 	$page = getVar('page');
-		
+
+    if(isset($_SESSION['accStatus'])) {
+        $objSmarty->assign('accStatus', $_SESSION['accStatus']);
+    }
+
 	$objSmarty->assign('page', getVar($page = 'page'));
 	$objSmarty->assign('title', getVar($title = 'title'));
 	$objSmarty->assign('autor', getVar($autor = 'autor'));
@@ -36,7 +40,6 @@
 	}
 	
 	$objSmarty->assign('isLogin', $isLogin);
-	
 	
 	$end = microtime();
 	
