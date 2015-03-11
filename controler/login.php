@@ -23,7 +23,7 @@
 			{
 				if($login->checkUserAccStatus()) //sprawdzanie statusu konta
 				{
-				
+				    $_SESSION['accStatus'] = $login->accStatus;
 					$_SESSION['isLogin'] = true;
 					header('Location: '.PAGE.'/news');
 
@@ -52,6 +52,7 @@ class Login
 {	
 	public $username;
 	public $password;
+    public $accStatus;
 	
 	public function __construct($username, $password)
 	{										
@@ -100,11 +101,11 @@ class Login
 		
 		return $this->getUserPass;
 	}
-	
+
 	public function checkUserAccStatus()
 	{
-		$this->userAccStatus = $this->modelLogin->getUserAccStatus($this->username);
-		if($this->userAccStatus != 4)
+		$this->accStatus = $this->modelLogin->getUserAccStatus($this->username);
+		if($this->accStatus != 4)
 		{
 			return true;
 		} else {
